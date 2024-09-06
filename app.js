@@ -1,26 +1,47 @@
 function pesquisar() {
     let section = document.getElementById("resultados-pesquisa")
-console.log(section);
 
-let resultado = ""
+let campoPesquisa = document.getElementById("campodepesquisa").value
+console.log(campoPesquisa)
+
+campoPesquisa = campoPesquisa.toLowerCase()
+
+let resultado = "";
+let titulo = "";
+let genero = "";
+let tags = "";
 
 for (let dado of gamesdados) {
+  titulo = dado.titulo.toLowerCase()
+  genero = dado.genero.toLowerCase()
 
-resultado += `
-            <div class="item-resultado">
-                <h2>
-                    <a>${dado.titulo}</a>
-                </h2>
-                <p class="descricao-meta">${dado.descricao}</p>
-                <p class="plataformas" >Plataformas: ${dado.plataforma}</p>
-                <p>Lançamento: ${dado.dataLancamento}</p>
-                <a class="maisinfo" href="${dado.link}" target="_blank">Mais informações</a>
-            </div>
+  if (!campoPesquisa) {
+    section.innerHTML = `<p class="erro" >Texto invalido: campo vazio</p>`
+    return
+  }
+  
+  if(titulo.includes(campoPesquisa) || genero.includes(campoPesquisa)) {
+    resultado += `
+    <div class="item-resultado">
+        <h2>
+            <a>${dado.titulo}</a>
+        </h2>
+        <p class="descricao-meta">${dado.descricao}</p>
+        <p class="plataformas" >Plataformas: ${dado.plataforma}</p>
+        <p class="genero"> Genero: ${dado.genero}</p>
+        <p>Lançamento: ${dado.dataLancamento}</p>
+        <a class="maisinfo" href="${dado.link}" target="_blank">Mais informações</a>
+    </div>
 `
 }
 
-section.innerHTML = resultado
+if (resultado === "") {
+  section.innerHTML = `<p class="erro" >Jogo(s) não encontrado ou AINDA não disponivel na base de dados</p>`;
+} else {
+  section.innerHTML = resultado;
+}}
 }
+
 
 // console.log(gamesdados);
 const links = document.querySelectorAll('nav li a');
