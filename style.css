@@ -88,6 +88,18 @@ h1 {
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
 
+.erro {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    text-shadow: 2px 1px 0px #000000;
+    color: #ffffff; /* Or another suitable color */
+    text-decoration: underline #ffffff;
+    padding: 5.5rem 0.5rem;
+  }
+
 section {
     margin-bottom: 3rem;
 }
@@ -110,6 +122,7 @@ section {
 }
 
 .barradepesquisa {
+    width: 12rem;
     color: rgb(255, 255, 255);
     background-color: #222; /* Cor de fundo escura */
     border-radius: 10px; /* Cantos arredondados */
@@ -137,7 +150,6 @@ section {
     height: 46vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-    padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
     display: flex; /* Adiciona display flex para controlar os itens */
     flex-direction: row;
@@ -152,7 +164,7 @@ section {
     border-radius: 0.6rem;
     padding: 1rem;
     box-shadow: 0px 0px 12px 3px rgb(0 0 0);
-    width: calc(33% - 20px);
+    min-width: 20rem;
     margin: 10px;
     box-sizing: border-box;
 }
@@ -169,12 +181,12 @@ section {
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
-    color: #1f4d7c; /* Cor do texto dos links */
+    color: #1c2b3b;
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
-    color: #161616;
+    color: #333437;
 }
 
 .direitos {
