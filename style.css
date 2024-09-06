@@ -167,6 +167,7 @@ section {
     min-width: 20rem;
     margin: 10px;
     box-sizing: border-box;
+    width: calc(25% - 20px);
 }
 
 .item-resultado img {
@@ -242,9 +243,3 @@ footer {
         width: 100%; /* Reduz a largura para telas menores */
       }
     }
-
-@media (min-width: 1200px) { /* Ajuste o ponto de quebra conforme necessário */
-  .item-resultado {
-    width: calc(25% - 20px); /* Aumenta o número de itens por linha em telas maiores */
-  }
-}
