@@ -10,33 +10,33 @@
 
 <body>
   <nav>
+    <p class="repositorio">Repositório Gamer</p>
     <ul class="menu1">
-        <li><a href="#">Jogos</a></li>
-        <li><a href="#">Sobre</a></li>
+        <li><a target="_blank" href="https://github.com/M4ximoG/RepositorioGamer">Repositório</a></li>
     </ul>
-    <form class="input">
-      <input class="barradepesquisa" type="text" placeholder="Pesquise um jogo!">
-      <button class="botaodepesquisa" type="submit">Pesquisar</button>
-    </form>
   </nav>
+  <div class="input">
+    <input class="barradepesquisa" type="text" placeholder="Pesquise um jogo!">
+    <button class="botaodepesquisa" type="submit" onclick="pesquisar()">Pesquisar</button>
+  </div>
     <header>
-        <h1>Últimos Lançamentos</h1>
+        <h1>Biblioteca de jogos</h1>
     </header>
-    <main>
+    <main class="container1">
         <section class="resultados-pesquisa" id="resultados-pesquisa">
-            <div class="item-resultado">
+            <!-- <div class="item-resultado">
                 <h2>
-                    <a href="#" target="_blank">Rebeca Andrade</a>
+                    <a>Rebeca Andrade</a>
                 </h2>
                 <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Rebeca_Andrade_in_2023.jpg" alt="Imagem da Rebeca Andrade">
                 <p class="descricao-meta">Rebeca Andrade é uma das maiores ginastas brasileiras de todos os tempos. Com sua força, elegância e determinação, ela conquistou o coração dos brasileiros e se tornou um verdadeiro ícone do esporte nacional.</p>
                 <a class="maisinfo" href="https://pt.wikipedia.org/wiki/Rebeca_Andrade" target="_blank">Mais informações</a>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer>
-        <p>2024 - Atletas do Brasil. Todos os direitos reservados</p>
-        <p>Entre em contato pelo email: guilherme@atletas.com.br</p>
+        <p class="direitos"> &copy; 2024 - Todos os direitos reservados.</p>
+        <p class="sobre">Redes: <a class="a2" href="https://linktr.ee/m4ximog">linktree.com</a></p>
     </footer>
     <script src="dados.js"></script>
     <script src="app.js"></script>
